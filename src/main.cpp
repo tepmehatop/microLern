@@ -14,7 +14,6 @@ int main(void)
     DDRD =  0b0000000;
     PORTD = 0b1111111;
 	
-    /* Replace with your application code */
     while (1) 
     {
         if (PIND == 0b1111110){
@@ -25,7 +24,7 @@ int main(void)
         }
         else if (PIND == 0b1111101)
         {
-        for(int i = 10; i > 10; i-- ){
+        for(int i = 10; i >= 0; i-- ){
         PORTB = arr[i];
         _delay_ms(200);
         }
