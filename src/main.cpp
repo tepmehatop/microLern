@@ -17,17 +17,15 @@ int main(void)
     while (1) 
     {
         if (PIND == 0b1111110){
-        for(int i = 0; i < 10; i++ ){
-        PORTB = arr[i];
-        _delay_ms(200);
-        }
+            count++;
+            _delay_ms(200);
+            PORTB = arr[count];
         }
         else if (PIND == 0b1111101)
         {
-        for(int i = 10; i >= 0; i-- ){
-        PORTB = arr[i];
-        _delay_ms(200);
-        }
+            count--;
+             _delay_ms(200);
+            PORTB = arr[count];
         }
     }
 }
