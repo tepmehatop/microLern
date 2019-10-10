@@ -16,16 +16,16 @@ int main(void)
 	
     while (1) 
     {
+         PORTB = arr[count];
+         
         if (PIND == 0b1111110){
             count++;
-            _delay_ms(200);
-            PORTB = arr[count];
+            _delay_ms(200);      
         }
         else if (PIND == 0b1111101)
         {
             count--;
              _delay_ms(200);
-            PORTB = arr[count];
         }
     }
 }
